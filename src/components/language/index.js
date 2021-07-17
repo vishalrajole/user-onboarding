@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useIntl } from "react-intl";
+import PropTypes from "prop-types";
 import {
   MenuItem,
   Select,
@@ -29,7 +30,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Language = () => {
+const Language = ({ showLabel }) => {
   const intl = useIntl();
   const { language, setLanguage } = useContext(LocaleContext);
 
@@ -40,9 +41,12 @@ const Language = () => {
   return (
     <>
       <FormControl variant="standard">
-        <InputLabel id="language-label" FormLabelClasses={{}}>
-          {intl.formatMessage(messages.languageLabel)}
-        </InputLabel>
+        {showLabel && (
+          <InputLabel id="language-label" FormLabelClasses={{}}>
+            {intl.formatMessage(messages.languageLabel)}
+          </InputLabel>
+        )}
+
         <Select
           labelId="language-label"
           id="language"
@@ -64,4 +68,10 @@ const Language = () => {
   );
 };
 
+Language.propTypes = {
+  showLabel: PropTypes.bool,
+};
+Language.defaultProps = {
+  showLabel: false,
+};
 export default Language;

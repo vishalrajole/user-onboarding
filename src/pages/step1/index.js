@@ -18,7 +18,7 @@ const Step1 = ({ intl }) => {
       <Typography variant="h4" data-testid="step1">
         {intl.formatMessage(messages.stepTitle)}
       </Typography>
-      <Language />
+      <Language showLabel={true} />
       <Button
         variant="contained"
         onClick={() => history.push("/step2")}
