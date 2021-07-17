@@ -2,10 +2,10 @@ import { styled } from "@material-ui/core/styles";
 
 export const GallaryWrapper = styled("div")(({ theme }) => ({
   display: "grid",
-  gridGap: "30px",
+  gridGap: 30,
   gridTemplateColumns: "repeat(auto-fill,minmax(22%,1fr))",
   gridAutoFlow: "column",
-  gridAutoColumns: "minmax(22%,1fr)",
+  gridAutoColumns: "minmax(22%, 1fr)",
   overflowX: "hidden",
 }));
 

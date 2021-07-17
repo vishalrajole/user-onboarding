@@ -44,13 +44,20 @@ const Step3 = () => {
               name: user?.first_name,
             })}
           </Typography>
-          <img
-            src={user?.avatar}
-            width={200}
-            height={200}
-            alt={user?.first_name}
-          />
-          <Button variant="contained" onClick={() => history.push("/step2")}>
+          <div data-testid="user">
+            <img
+              src={user?.avatar}
+              width={200}
+              height={200}
+              alt={user?.first_name}
+            />
+          </div>
+          <Button
+            variant="outlined"
+            data-testid="back"
+            size="large"
+            onClick={() => history.push("/step2")}
+          >
             {intl.formatMessage(messages.back)}
           </Button>
         </div>

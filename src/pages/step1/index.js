@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
 import { injectIntl } from "react-intl";
-import Button from "@material-ui/core/Button";
 import { Typography } from "@material-ui/core";
 import Language from "../../components/language";
 import Logo from "../../components/logo";
 import messages from "./messages";
-import { Wrapper } from "./styles";
+import { Wrapper, Button } from "./styles";
 
 const Step1 = ({ intl }) => {
   const history = useHistory();

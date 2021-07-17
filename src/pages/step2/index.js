@@ -75,7 +75,7 @@ const Step2 = () => {
       ) : (
         <>
           <Logo />
-          <Typography variant="h6" data-testid="step2">
+          <Typography variant="h4" data-testid="step2">
             {intl.formatMessage(messages.stepTitle)}
           </Typography>
           <Typography variant="h6">
@@ -110,19 +110,21 @@ const Step2 = () => {
           </HorizontalWrapper>
           <IconWrapper>
             <Button
+              variant="outlined"
+              onClick={() => history.push("/step1")}
+              data-testid="back"
+              size="large"
+            >
+              {intl.formatMessage(messages.back)}
+            </Button>
+            <Button
               variant="contained"
               onClick={onNext}
               disabled={!selectedUser}
               data-testid="next"
+              size="large"
             >
               {intl.formatMessage(messages.next)}
-            </Button>
-            <Button
-              variant="outlined"
-              onClick={() => history.push("/step1")}
-              data-testid="back"
-            >
-              {intl.formatMessage(messages.back)}
             </Button>
           </IconWrapper>
         </>
