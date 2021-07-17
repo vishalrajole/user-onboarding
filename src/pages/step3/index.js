@@ -6,7 +6,7 @@ import { Typography, Button } from "@material-ui/core";
 import { getUser } from "../../api/users";
 import Logo from "../../components/logo";
 import Loading from "../../components/loading";
-import { Image, ContainerWrapper } from "../../style/common";
+import { Image, ContainerWrapper, ButtonWrapper } from "../../style/common";
 import Language from "../../components/language";
 import messages from "./messages";
 
@@ -36,10 +36,11 @@ const Step3 = () => {
       {isLoading ? (
         <Loading message={intl.formatMessage(messages.loading)} />
       ) : (
-        <div>
+        <>
+          <Language alignRight={true} />
           <Logo />
-          <Language />
-          <Typography variant="h4">
+
+          <Typography variant="h4" sx={{ marginBottom: 6 }}>
             {intl.formatMessage(messages.stepTitle, {
               name: user?.first_name,
             })}
@@ -47,15 +48,17 @@ const Step3 = () => {
           <div data-testid="user">
             <Image src={user?.avatar} alt={user?.first_name} />
           </div>
-          <Button
-            variant="outlined"
-            data-testid="back"
-            size="large"
-            onClick={() => history.push("/step2")}
-          >
-            {intl.formatMessage(messages.back)}
-          </Button>
-        </div>
+          <ButtonWrapper>
+            <Button
+              variant="outlined"
+              data-testid="back"
+              size="large"
+              onClick={() => history.push("/step2")}
+            >
+              {intl.formatMessage(messages.back)}
+            </Button>
+          </ButtonWrapper>
+        </>
       )}
     </ContainerWrapper>
   );

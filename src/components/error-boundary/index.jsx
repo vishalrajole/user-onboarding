@@ -1,4 +1,5 @@
 import React from "react";
+import { InfoMessage } from "../../style/common";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.info) {
-      return <span>Oops, something went wrong!</span>;
+      return <InfoMessage>Oops, something went wrong!</InfoMessage>;
     }
     return this.props.children;
   }

@@ -29,12 +29,3 @@ export const HorizontalWrapper = styled("div")(({ theme }) => ({
   gridTemplateColumns: "30px auto-fill 30px",
   marginTop: 30,
 }));
-
-export const IconWrapper = styled("div")(({ theme }) => ({
-  display: "flex",
-  width: "100%",
-  padding: 15,
-  justifyContent: "center",
-  position: "fixed",
-  bottom: 240,
-}));

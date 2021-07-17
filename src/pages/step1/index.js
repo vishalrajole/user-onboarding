@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
 import { injectIntl } from "react-intl";
-import { Typography } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 import Language from "../../components/language";
 import Logo from "../../components/logo";
 import messages from "./messages";
-import { Button } from "./styles";
-import { ContainerWrapper } from "../../style/common";
+import { ContainerWrapper, ButtonWrapper } from "../../style/common";
 
 const Step1 = ({ intl }) => {
   const history = useHistory();
@@ -15,17 +14,19 @@ const Step1 = ({ intl }) => {
   return (
     <ContainerWrapper>
       <Logo />
-      <Typography variant="h4" data-testid="step1">
+      <Typography variant="h4" data-testid="step1" sx={{ marginBottom: 6 }}>
         {intl.formatMessage(messages.stepTitle)}
       </Typography>
       <Language showLabel={true} />
-      <Button
-        variant="contained"
-        onClick={() => history.push("/step2")}
-        data-testid="next"
-      >
-        {intl.formatMessage(messages.next)}
-      </Button>
+      <ButtonWrapper>
+        <Button
+          variant="contained"
+          onClick={() => history.push("/step2")}
+          data-testid="next"
+        >
+          {intl.formatMessage(messages.next)}
+        </Button>
+      </ButtonWrapper>
     </ContainerWrapper>
   );
 };

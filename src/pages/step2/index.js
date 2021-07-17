@@ -5,13 +5,8 @@ import { IconButton, Typography, Button } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 import Logo from "../../components/logo";
-import {
-  GallaryWrapper,
-  ImageTile,
-  HorizontalWrapper,
-  IconWrapper,
-} from "./styles";
-import { Image, ContainerWrapper } from "../../style/common";
+import { GallaryWrapper, ImageTile, HorizontalWrapper } from "./styles";
+import { Image, ContainerWrapper, ButtonWrapper } from "../../style/common";
 import messages from "./messages";
 import Loading from "../../components/loading";
 import { getUsers } from "../../api/users";
@@ -76,7 +71,7 @@ const Step2 = () => {
       ) : (
         <>
           <Logo />
-          <Typography variant="h4" data-testid="step2" sx={{ marginBottom: 4 }}>
+          <Typography variant="h4" data-testid="step2" sx={{ marginBottom: 6 }}>
             {intl.formatMessage(messages.stepTitle)}
           </Typography>
           <Typography variant="h6">
@@ -108,7 +103,7 @@ const Step2 = () => {
               <ArrowForwardIos />
             </IconButton>
           </HorizontalWrapper>
-          <IconWrapper>
+          <ButtonWrapper>
             <Button
               variant="outlined"
               onClick={() => history.push("/step1")}
@@ -127,7 +122,7 @@ const Step2 = () => {
             >
               {intl.formatMessage(messages.next)}
             </Button>
-          </IconWrapper>
+          </ButtonWrapper>
         </>
       )}
     </ContainerWrapper>
