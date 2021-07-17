@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-import Button from "@material-ui/core/Button";
 import { useHistory, useParams } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 
 import { getUser } from "../../api/users";
 import Logo from "../../components/logo";
