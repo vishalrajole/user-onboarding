@@ -19,11 +19,11 @@ const messages = defineMessages({
   },
   loading: {
     id: "step2.loading",
-    defaultMessage: "Loading users",
+    defaultMessage: "Loading users...",
   },
   noUsersFound: {
     id: "step2.noUsersFound",
-    defaultMessage: "No users found",
+    defaultMessage: "No users found!",
   },
 });
 

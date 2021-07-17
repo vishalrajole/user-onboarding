@@ -11,7 +11,7 @@ const messages = defineMessages({
   },
   loading: {
     id: "step3.loading",
-    defaultMessage: "Loading user profile",
+    defaultMessage: "Loading user profile...",
   },
 });
 

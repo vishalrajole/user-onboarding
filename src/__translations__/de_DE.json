@@ -1,10 +1,14 @@
 {
+  "language.label": "Bitte wählen Sie Ihre Sprache",
   "step1.next": "Nächster",
   "step1.title": "Schritt 1",
   "step2.back": "Zurück",
   "step2.info": "Wählen Sie Ihr Profil",
+  "step2.loading": "Benutzer werden geladen...",
   "step2.next": "Nächster",
+  "step2.noUsersFound": "Keine Benutzer gefunden! ",
   "step2.title": "Schritt 2",
   "step3.back": "Zurück",
+  "step3.loading": "Benutzerprofil wird geladen...",
   "step3.title": "Willkommen {name} bei Kadmos"
 }
