@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 import { styled } from "@material-ui/core/styles";
 
 export const ContainerWrapper = styled("div")(({ theme }) => ({
-  marginTop: 60,
+  marginTop: 50,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -17,10 +17,8 @@ export const Image = styled("img")(({ theme }) => ({
 export const ButtonWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   width: "100%",
-  padding: 50,
+  padding: "60px 20px 20px",
   justifyContent: "center",
-  position: "fixed",
-  bottom: 240,
   background: "#fff",
 }));
 
