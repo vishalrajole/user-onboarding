@@ -5,7 +5,12 @@ import { IconButton, Typography, Button } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 import Logo from "../../components/logo";
-import { GallaryWrapper, ImageTile, HorizontalWrapper } from "./styles";
+import {
+  GallaryWrapper,
+  ImageTile,
+  HorizontalWrapper,
+  UserName,
+} from "./styles";
 import { Image, ContainerWrapper, ButtonWrapper } from "../../style/common";
 import messages from "./messages";
 import Loading from "../../components/loading";
@@ -94,7 +99,7 @@ const Step2 = () => {
                       alt={user.first_name}
                       data-testid="avatar"
                     />
-                    <span>{user.first_name}</span>
+                    <UserName>{user.first_name}</UserName>
                   </ImageTile>
                 );
               })}

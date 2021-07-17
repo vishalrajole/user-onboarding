@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import { styled } from "@material-ui/core/styles";
 
 export const GallaryWrapper = styled("div")(({ theme }) => ({
@@ -7,6 +8,13 @@ export const GallaryWrapper = styled("div")(({ theme }) => ({
   gridAutoFlow: "column",
   gridAutoColumns: "minmax(22%, 1fr)",
   overflowX: "hidden",
+}));
+
+export const UserName = styled(Typography)(({ theme }) => ({
+  marginTop: 8,
+  alignItems: "center",
+  justifyContent: "center",
+  display: "flex",
 }));
 
 export const ImageTile = styled("div")(({ theme }) => ({
