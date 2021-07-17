@@ -40,7 +40,7 @@ const Language = () => {
   return (
     <>
       <FormControl variant="standard">
-        <InputLabel id="language-label">
+        <InputLabel id="language-label" FormLabelClasses={{}}>
           {intl.formatMessage(messages.languageLabel)}
         </InputLabel>
         <Select

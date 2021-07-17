@@ -6,7 +6,7 @@ import { Typography, Button } from "@material-ui/core";
 import { getUser } from "../../api/users";
 import Logo from "../../components/logo";
 import Loading from "../../components/loading";
-import { Image } from "../../style/common";
+import { Image, ContainerWrapper } from "../../style/common";
 import Language from "../../components/language";
 import messages from "./messages";
 
@@ -32,7 +32,7 @@ const Step3 = () => {
   }, [id]);
 
   return (
-    <>
+    <ContainerWrapper>
       {isLoading ? (
         <Loading message={intl.formatMessage(messages.loading)} />
       ) : (
@@ -57,7 +57,7 @@ const Step3 = () => {
           </Button>
         </div>
       )}
-    </>
+    </ContainerWrapper>
   );
 };
 

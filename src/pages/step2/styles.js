@@ -36,5 +36,5 @@ export const IconWrapper = styled("div")(({ theme }) => ({
   padding: 15,
   justifyContent: "center",
   position: "fixed",
-  bottom: 0,
+  bottom: 240,
 }));

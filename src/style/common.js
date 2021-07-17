@@ -1,5 +1,12 @@
 import { styled } from "@material-ui/core/styles";
-import { Button as MuiButton, Container } from "@material-ui/core";
+
+export const ContainerWrapper = styled("div")(({ theme }) => ({
+  marginTop: 60,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+}));
 
 export const Image = styled("img")(({ theme }) => ({
   border: "1px solid #797979",

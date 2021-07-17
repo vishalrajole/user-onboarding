@@ -6,13 +6,14 @@ import { Typography } from "@material-ui/core";
 import Language from "../../components/language";
 import Logo from "../../components/logo";
 import messages from "./messages";
-import { Wrapper, Button } from "./styles";
+import { Button } from "./styles";
+import { ContainerWrapper } from "../../style/common";
 
 const Step1 = ({ intl }) => {
   const history = useHistory();
 
   return (
-    <Wrapper>
+    <ContainerWrapper>
       <Logo />
       <Typography variant="h4" data-testid="step1">
         {intl.formatMessage(messages.stepTitle)}
@@ -25,7 +26,7 @@ const Step1 = ({ intl }) => {
       >
         {intl.formatMessage(messages.next)}
       </Button>
-    </Wrapper>
+    </ContainerWrapper>
   );
 };
 

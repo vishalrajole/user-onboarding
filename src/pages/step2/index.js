@@ -11,7 +11,7 @@ import {
   HorizontalWrapper,
   IconWrapper,
 } from "./styles";
-import { Image } from "../../style/common";
+import { Image, ContainerWrapper } from "../../style/common";
 import messages from "./messages";
 import Loading from "../../components/loading";
 import { getUsers } from "../../api/users";
@@ -65,7 +65,7 @@ const Step2 = () => {
   };
 
   return (
-    <>
+    <ContainerWrapper>
       {users?.length === 0 && !isLoading && (
         <div data-testid="noUserFound">
           {intl.formatMessage(messages.noUsersFound)}
@@ -76,7 +76,7 @@ const Step2 = () => {
       ) : (
         <>
           <Logo />
-          <Typography variant="h4" data-testid="step2">
+          <Typography variant="h4" data-testid="step2" sx={{ marginBottom: 4 }}>
             {intl.formatMessage(messages.stepTitle)}
           </Typography>
           <Typography variant="h6">
@@ -114,6 +114,7 @@ const Step2 = () => {
               onClick={() => history.push("/step1")}
               data-testid="back"
               size="large"
+              sx={{ marginRight: 3 }}
             >
               {intl.formatMessage(messages.back)}
             </Button>
@@ -129,7 +130,7 @@ const Step2 = () => {
           </IconWrapper>
         </>
       )}
-    </>
+    </ContainerWrapper>
   );
 };
 
