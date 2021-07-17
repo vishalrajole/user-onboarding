@@ -4,6 +4,7 @@ import { useIntl } from "react-intl";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+
 import { LocaleContext, locales } from "../../utils/languageContext";
 import messages from "./messages";
 
@@ -14,6 +15,7 @@ const Language = () => {
   const handleChange = (event) => {
     setLanguage(event.target.value);
   };
+
   return (
     <FormControl fullWidth>
       <InputLabel id="language-label">
