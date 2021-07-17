@@ -1,0 +1,10 @@
+{
+  "step1.next": "Next",
+  "step1.title": "Step1",
+  "step2.back": "Back",
+  "step2.info": "Choose your profile",
+  "step2.next": "Next",
+  "step2.title": "Step 2",
+  "step3.back": "Back",
+  "step3.title": "Welcome {name} to Kadmos"
+}
