@@ -3,11 +3,12 @@ import { useIntl } from "react-intl";
 import Button from "@material-ui/core/Button";
 import { useHistory, useParams } from "react-router-dom";
 import { Typography } from "@material-ui/core";
+
+import { getUser } from "../../api/users";
 import Logo from "../../components/logo";
 import Loading from "../../components/loading";
 import Language from "../../components/language";
 import messages from "./messages";
-import { getUser } from "../../utils/api";
 
 const Step3 = () => {
   const history = useHistory();

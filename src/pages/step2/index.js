@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useIntl } from "react-intl";
-import { IconButton, Typography } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
+import { IconButton, Typography, Button } from "@material-ui/core";
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+
 import Logo from "../../components/logo";
 import {
   GallaryWrapper,
@@ -12,8 +13,7 @@ import {
 } from "./styles";
 import messages from "./messages";
 import Loading from "../../components/loading";
-import { getUsers } from "../../utils/api";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import { getUsers } from "../../api/users";
 
 const Step2 = () => {
   const refContainer = useRef({});
