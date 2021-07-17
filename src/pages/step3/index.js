@@ -7,6 +7,7 @@ import { Typography } from "@material-ui/core";
 import { getUser } from "../../api/users";
 import Logo from "../../components/logo";
 import Loading from "../../components/loading";
+import { Image } from "../../style/common";
 import Language from "../../components/language";
 import messages from "./messages";
 
@@ -39,18 +40,13 @@ const Step3 = () => {
         <div>
           <Logo />
           <Language />
-          <Typography variant="h3">
+          <Typography variant="h4">
             {intl.formatMessage(messages.stepTitle, {
               name: user?.first_name,
             })}
           </Typography>
           <div data-testid="user">
-            <img
-              src={user?.avatar}
-              width={200}
-              height={200}
-              alt={user?.first_name}
-            />
+            <Image src={user?.avatar} alt={user?.first_name} />
           </div>
           <Button
             variant="outlined"

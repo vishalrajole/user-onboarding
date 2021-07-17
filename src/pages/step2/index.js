@@ -11,6 +11,7 @@ import {
   HorizontalWrapper,
   IconWrapper,
 } from "./styles";
+import { Image } from "../../style/common";
 import messages from "./messages";
 import Loading from "../../components/loading";
 import { getUsers } from "../../api/users";
@@ -93,9 +94,8 @@ const Step2 = () => {
                     key={user.id}
                     data-testid={`user-${user.id}`}
                   >
-                    <img
+                    <Image
                       src={user.avatar}
-                      height={200}
                       alt={user.first_name}
                       data-testid="avatar"
                     />
